@@ -63,7 +63,6 @@ app.post("/compose", function( req, res){
 app.get("/posts/:postName", function(req, res){
   const requestedTitle = _.lowerCase(req.params.postName);
   const stored  = posts.find(element => _.lowerCase(element.title) === requestedTitle)
-  console.log(stored);
   if( _.lowerCase(stored.title) === requestedTitle){
     res.render(
       "post",
