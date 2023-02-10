@@ -59,7 +59,13 @@ app.post("/compose", function( req, res){
 });
 
 
-
+app.get("/posts/:postName", function(req, res){
+  const requestedTitle = req.params.postName;
+  if(posts.find(element => element.title === req.params.postName)){
+    console.log("MATCH FOUND");
+  }
+  
+});
 
 
 
